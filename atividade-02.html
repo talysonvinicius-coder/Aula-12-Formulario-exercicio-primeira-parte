@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+
+    <style>
+
+        body {
+            /*O fundo da página*/
+            background: linear-gradient(135deg, #74b9ff, #a29bfe);
+            font-family: "Segoe UI", sans-serif; /*Tipo de letra*/
+            display: flex; /* Deixa o conteúdo centralizado */
+            justify-content: center; /*Centraliza no meio da tela */
+            align-items: center;
+            height: 100vh; /* Altura da tela toda */
+            margin: 0; /* Tira as margens */
+        }
+
+        /* A caixa branca do formulário */
+        .form-container {
+            background: white; /*Cor de fundo */
+            padding: 40px; /*Espaço por dentro */
+            border-radius: 16px; /*Cantos arredondados */
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15); /*Sombrinha atrás */
+            width: 100%;
+            max-width: 400px; /*Largura máxima */
+            animation: aparecer 0.8s ease; /*Animação suave de entrada */
+        }
+
+        /*Efeito de "entrando na tela" */
+        @keyframes aparecer {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* O título "Cadastro" */
+        h1 {
+            text-align: center; /*Centralizado */
+            color: #2d3436; /*Cinza escuro */
+            margin-bottom: 25px;
+        }
+
+        /*Cada grupo de campo */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        /* As legendas acima dos campos (Nome, E-mail, etc.) */
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 6px;
+            color: #2d3436;
+        }
+
+        /*As caixas de digitação */
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%; /* Largura total da caixa */
+            padding: 10px;
+            border: 1px solid #b2bec3; /* borda cinza */
+            border-radius: 8px;
+            transition: all 0.3s; /* Movimento suave */
+        }
+
+        /*Quando a pessoa clica para digitar */
+        input:focus {
+            border-color: #0984e3; /* Borda azul */
+            box-shadow: 0 0 5px rgba(9,132,227,0.4); /* Brilho */
+            outline: none; /*Tira a linha feia do navegador */
+        }
+
+        /* O botão de "Cadastrar" */
+        input[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            background-color: #0984e3; /* Cor azul */
+            color: white; /* Letra branca */
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer; /* Mão ao passar por cima */
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        /* Quando o mouse passa por cima do botão */
+        input[type="submit"]:hover {
+            background-color: #74b9ff; /* Fica azul claro */
+            transform: translateY(-2px); /* Dá um pequeno pulo! */
+        }
+
+        /* Texto no final */
+        .footer-text {
+            text-align: center;
+            font-size: 0.9em;
+            color: #636e72;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form-container">
+        <h1>Cadastro</h1>
+
+        <!-- O formulário onde a pessoa vai escrever -->
+        <form action="#" method="post" autocomplete="off">
+            
+            <!-- Campo para o nome -->
+            <div class="form-group">
+                <label for="nome">Nome completo</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+
+            <!-- Campo para o e-mail -->
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <!-- Campo para a senha -->
+            <div class="form-group">
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" name="senha" required>
+            </div>
+
+            <!-- Botão de enviar -->
+            <input type="submit" value="Cadastrar">
+        </form>
+
+        <!-- Mensagem de rodapé -->
+        <p class="footer-text">Já possui uma conta? 
+            <a href="#" style="color:#0984e3; text-decoration:none;">Entrar</a>
+        </p>
+    </div>
+</body>
+</html>
+
